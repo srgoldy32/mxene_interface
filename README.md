@@ -1,0 +1,1 @@
+Trying to do things right and get it all into a git repo for replication on hpc
