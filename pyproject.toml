@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MXene_bilayer"
+version = "0.1.0"
+description = "DFT study of defected MXene bilayers"
+authors = [
+    {name = "Steven Goldy"}
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "atomman",
+    "pymatgen",
+    "pathlib",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

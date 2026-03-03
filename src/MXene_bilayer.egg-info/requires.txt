@@ -1,0 +1,5 @@
+numpy
+matplotlib
+atomman
+pymatgen
+pathlib
