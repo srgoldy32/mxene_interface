@@ -1,6 +1,6 @@
 # src/mxene/io/kpoints.py
 
-def read_kpoints(kpoints_path):
+def get_kpoints(kpoints_path):
     with open(kpoints_path, 'r') as f:
         lines = f.readlines()
     x_line = lines[3].split()
