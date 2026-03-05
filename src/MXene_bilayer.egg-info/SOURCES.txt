@@ -13,3 +13,6 @@ src/mxene/io/incar.py
 src/mxene/io/paths.py
 src/mxene/io/poscar.py
 src/mxene/io/slurm.py
+src/mxene/structures/__init__.py
+src/mxene/structures/monolayer.py
+src/mxene/structures/unit.py
