@@ -8,11 +8,16 @@ src/MXene_bilayer.egg-info/top_level.txt
 src/mxene/__init__.py
 src/mxene/compute/__init__.py
 src/mxene/compute/relax.py
+src/mxene/constants/__init__.py
+src/mxene/constants/constants.py
 src/mxene/io/__init__.py
 src/mxene/io/incar.py
 src/mxene/io/paths.py
 src/mxene/io/poscar.py
+src/mxene/io/setup_log.py
 src/mxene/io/slurm.py
 src/mxene/structures/__init__.py
+src/mxene/structures/am_helper_functions.py
+src/mxene/structures/bilayer.py
 src/mxene/structures/monolayer.py
 src/mxene/structures/unit.py

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name="Ti2C"
+#SBATCH --job-name="JOBNAME"
 #comment = "bu"
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=24

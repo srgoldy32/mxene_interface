@@ -61,7 +61,7 @@ def make_monolayer_vacancy(*,
         raise ValueError('shift must be an integer')
 
     header = f'{spec} monolayer, {size}, shift = {shift},  {vacancy_condition}'
-    # print('Making monolayer: ', header)
+    print('AM Making monolayer: ', header)
     
     unit = am.load('poscar', f'{UNITS_DIR}/{spec}.poscar')
     # apply shift

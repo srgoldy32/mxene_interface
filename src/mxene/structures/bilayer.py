@@ -10,7 +10,7 @@ def make_bilayer(bottom_file, top_file, applied_gap,):
     top_header = get_header(top_file)
     bottom_header = get_header(bottom_file)
     header = f'({bottom_header}) on ({top_header}) with applied gap = {applied_gap} Angstrom'
-
+    print('AM Making bilayer: ', header)
 
     bottom = am.load('poscar', bottom_file)
     top = am.load('poscar', top_file)
