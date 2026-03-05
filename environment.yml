@@ -1,0 +1,6 @@
+name: mxp3
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+prefix: /home/goldy/miniconda3/envs/mxp3
