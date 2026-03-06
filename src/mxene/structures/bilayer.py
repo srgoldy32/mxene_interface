@@ -15,7 +15,8 @@ def make_bilayer(bottom_file: Path, top_file: Path, applied_gap: float):
     top_header = get_header(top_file)
     bottom_header = get_header(bottom_file)
     header = f'({bottom_header}) on ({top_header}) with applied gap = {applied_gap} Angstrom'
-    print('AM Making bilayer: ', header)
+    # print('AM Making bilayer: ', header)
+
 
     bottom = am.load('poscar', bottom_file)
     top = am.load('poscar', top_file)
@@ -26,8 +27,9 @@ def make_bilayer(bottom_file: Path, top_file: Path, applied_gap: float):
     full_z = sum(dzs) + ADDITIONAL_VACCUM
     mid_z = full_z/2
 
-
-    half_gap = applied_gap/2
+    # the center to center gap is the applied gap plus half the thickness of each sheet
+    center2center_gap = applied_gap + dzs[0]/2 + dzs[1]/2
+    half_gap = center2center_gap/2
   
 
     top = floor_zs(top)
