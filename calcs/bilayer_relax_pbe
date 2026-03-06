@@ -1,0 +1,29 @@
+See the INCAR below
+# Start Settings
+ISTART = 0
+ICHARG = 2
+# Electronic (SCF)
+ENCUT  = 520
+EDIFF  = 1E-6
+NELM   = 200        # Give it more room to find the first solution
+ALGO   = Fast       # More stable than Normal for this system
+ISMEAR = 1          # Better for metallic MXenes
+SIGMA  = 0.05
+PREC   = Accurate
+LREAL  = auto       # to speed up the projection with many atoms.
+# Mixing (Crucial to prevent 100 NELM loop)
+AMIX   = 0.2
+BMIX   = 0.0001
+# Ionic Relaxation
+IBRION = 2
+ISIF   = 2
+NSW    = 100
+EDIFFG = -0.001      # -0.001 is EXTREMELY tight; -0.02 is standard
+# vdW & Dipole
+IVDW   = 11
+LDIPOL = .TRUE.
+IDIPOL = 3
+DIPOL  = 0.5 0.5 0.5  # Assumes bilayer is centered in the box
+# Parallelization
+KPAR   = 2
+NCORE  = 6
