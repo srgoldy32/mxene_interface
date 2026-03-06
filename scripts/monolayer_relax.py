@@ -3,7 +3,7 @@
 from pathlib import Path
 import argparse
 
-from mxene.io.paths import UNITS_DIR, RUNS_DIR, CALCS_DIR, JOBS_TEMPLATE_DIR
+from mxene.io.paths import RUNS_DIR, CALCS_DIR, JOBS_TEMPLATE_DIR
 from mxene.compute.relax import prepare_relaxation, submit_job
 from mxene.structures.monolayer import make_monolayer_vacancy
 from mxene.io.poscar import write_poscar

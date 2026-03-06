@@ -19,7 +19,8 @@ def prepare_relaxation(relax_dir: Path,
         pass # print(f"POSCAR already exists in {relax_dir}. Skipping copy to avoid overwriting.")
     else:   
         copy_poscar(poscar_path, relax_dir)
-    header = get_system_name(poscar_path)
+   
+    
     system_name = get_system_name(poscar_path)
     # Copy INCAR
     copy_incar(calc_incar, relax_dir)
@@ -35,9 +36,10 @@ def prepare_relaxation(relax_dir: Path,
         stdout=subprocess.DEVNULL,
     )
     # pull slurm template and render it
+    slurm_jobname = name_with_n_parents(relax_dir,6)
     slurm_file_path = relax_dir / slurm_template.name
     render_slurm(slurm_template, slurm_file_path, 
-                 job_name=f'relax_{header}')
+                 job_name=f'relax_{slurm_jobname}')
     record_setup_log(relax_dir, poscar_path, calc_incar, slurm_template)
 
     return slurm_file_path
